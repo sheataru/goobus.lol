@@ -40,8 +40,8 @@
             margin-bottom: 0.5em;
             text-shadow: 0 0 8px #00ff00;
         }
-		
-		h2 {
+        
+        h2 {
             font-size: 2em;
             margin-bottom: 0.5em;
             text-shadow: 0 0 8px #00ff00;
@@ -72,17 +72,41 @@
             color: #00ff00;
             border: 2px solid #00ff00;
         }
+        
+        /* Typewriter effect */
+        .typewriter {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.2em;
+            color: #00ff00;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #00ff00;
+            text-shadow: 0 0 8px #00ff00;
+            animation: typing 3s steps(25, end), blink 0.7s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 20.5em; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
     </style>
 </head>
 <body>
+    <div class="typewriter">://initializing cat photos</div>
     <div class="container">
         <!-- Main website heading -->
-        <h1>shea's website</h1>
+        <h1>   goobus.lol   </h1>
         
         <!-- Website description -->
         <p>welcome</p>
-		<h1>(^^ゞ</h1>
-		<h2>links</h2>
+        <h1>(^^ゞ</h1>
+        <h2>links</h2>
         
         <!-- Navigation Links -->
         <a href="about.html">about</a>
