@@ -12,6 +12,7 @@
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
             padding: 2em;
+            position: relative; /* Added to make the positioning of the button relative to the body */
         }
         h1 {
             font-size: 3em;
@@ -27,7 +28,6 @@
         }
         .back-button {
             display: inline-block;
-            margin-top: 2em;
             padding: 0.7em 2em;
             background: transparent;
             color: #00ff00;
@@ -37,18 +37,49 @@
             font-weight: bold;
             border-radius: 8px;
             transition: background 0.3s, color 0.3s;
+            text-shadow: 0 0 8px #00ff00; /* Glow effect applied only to the home button */
         }
-        .back-button:hover {
+        .socials-button {
+            display: inline-block;
+            padding: 0.7em 2em;
+            background: transparent;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background 0.3s, color 0.3s;
+            /* No text-shadow here to remove the glow from the socials button */
+        }
+        .back-button:hover, .socials-button:hover {
             background: #00ff00;
             color: black;
         }
+        .back-button {
+            position: absolute; /* Position the home button absolutely */
+            top: 20px;
+            left: 20px; /* Distance from the left */
+        }
+        .socials-button {
+            position: absolute; /* Position the socials button absolutely */
+            top: 20px;
+            left: calc(20px + 160px); /* Move the button 160px to the right of the home button */
+        }
+		hr {
+			border: 1px dashed #00ff00
+		}
     </style>
 </head>
 <body>
     <h1>about</h1>
-    <p>i'm person :)</p>
+    <hr>
+	<p> </p>
+	<p> </p>
+	<p>i'm person :)</p>
     <p>i like:</p>
     <p>-video game</p>
     <a href="/" class="back-button">home</a>
+    <a href="/socials" class="socials-button">socials</a> <!-- New "socials" button -->
 </body>
 </html>
