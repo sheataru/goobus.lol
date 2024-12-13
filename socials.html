@@ -18,7 +18,7 @@
             text-shadow: 0 0 8px #00ff00;
         }
 		/* Style the link button */
-        link-button {
+        .link-button {
             display: inline-block;
             padding: 0.7em 1.5em;
             background: #00ff00;
@@ -30,14 +30,13 @@
         }
         
         /* Change button appearance on hover */
-        link-button:hover {
+        .link-button:hover {
             background: black;
             color: #00ff00;
             border: 2px solid #00ff00;
         }
         .back-button {
             display: inline-block;
-            margin-top: 2em;
             padding: 0.7em 2em;
             background: transparent;
             color: #00ff00;
@@ -47,19 +46,44 @@
             font-weight: bold;
             border-radius: 8px;
             transition: background 0.3s, color 0.3s;
+            text-shadow: 0 0 8px #00ff00; /* Glow effect applied only to the home button */
         }
-        .back-button:hover {
+        .back-button:hover, .about-button:hover {
             background: #00ff00;
             color: black;
+        }
+		.back-button {
+			position: absolute; /* Position the home button absolutely */
+            top: 20px;
+            left: 20px; /* Distance from the left */
+        }
+		.about-button {
+            display: inline-block;
+            padding: 0.7em 2em;
+            background: transparent;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background 0.3s, color 0.3s;
+            /* No text-shadow here to remove the glow from the socials button */
+        }
+		.about-button {
+            position: absolute; /* Position the socials button absolutely */
+            top: 20px;
+            left: calc(20px + 160px); /* Move the button 160px to the right of the home button */
         }
     </style>
 </head>
 <body>
     <h1>socials</h1>
     <p>you can find me anywhere under 'sheataru' but here are the buttons:</p>
-    <a href="https://www.twitch.tv/sheataru" class="back-button">twitch</a>
-	<a href="https://www.youtube.com/@sheataru" class="back-button">youtube</a>
-	<a href="https://www.youtube.com/@sheaaLIVE" class="back-button">2nd youtube</a>
+    <a href="https://www.twitch.tv/sheataru" class="link-button">twitch</a>
+	<a href="https://www.youtube.com/@sheataru" class="link-button">youtube</a>
+	<a href="https://www.youtube.com/@sheaaLIVE" class="link-button">2nd youtube</a>
 	<a href="/" class="back-button">home</a>
+	<a href="/" class="about-button">about</a>
 </body>
 </html>
