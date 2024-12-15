@@ -52,10 +52,6 @@
             transition: background 0.3s, color 0.3s;
             /* No text-shadow here to remove the glow from the socials button */
         }
-        .back-button:hover, .socials-button:hover, .about-button:hover, {
-            background: #00ff00;
-            color: black;
-        }
         .back-button {
             position: absolute; /* Position the home button absolutely */
             top: 20px;
@@ -96,8 +92,11 @@
 		.about-button {
             position: absolute; /* Position the socials button absolutely */
             top: 20px;
-            left: calc(20px + 340px); /* Move the button 160px to the right of the home button */
+            left: calc(20px + 350px); /* Move the button 160px to the right of the home button */
         }
+        .back-button:hover, .socials-button:hover, .about-button:hover {
+            background: #00ff00;
+            color: black;
     </style>
 </head>
 <body>
@@ -115,6 +114,6 @@
 	</div>	
     <a href="/" class="back-button">home</a>
     <a href="socials.html" class="socials-button">socials</a>
-	<a href="about.html" class="about-button">about</a>
+    <a href="about.html" class="about-button">about</a>
 </body>
 </html>
